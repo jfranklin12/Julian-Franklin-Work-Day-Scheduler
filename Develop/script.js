@@ -60,13 +60,13 @@ console.log(hourEl);
 //     $(".time").addClass("bg-danger");
 // };
 
-if (hourEl === currentTimeEl) {
-    $(".time").addClass("present");
-    $(".time").remove("bg-success");
-}
+// if (hourEl === currentTimeEl) {
+//     $(".time").addClass("present");
+//     $(".time").remove("bg-success");
+// }
 
 
-console.log(hourEl)
+// console.log(hourEl)
 
 // if () {
 // $(".time").addClass("bg-secondary");
@@ -79,5 +79,5 @@ console.log(hourEl)
 
 
 // console.log(hour9El)
-console.log(currentTimeEl)
+// console.log(currentTimeEl)
 
