@@ -1,12 +1,10 @@
-var currentDayEl = moment().startOf('day').format("dddd, MMMM Do YYYY");
+// Variable to display current day
+var currentDayEl = moment().format("dddd, MMMM Do YYYY");
 $("#currentDay").text(currentDayEl);
+// variable to get current hour in 24 hour interval
 var currentTimeEl = moment().hour();
-
-
-
-
-
-
+console.log(currentTimeEl)
+// variables to display time
 var hour9El = moment().hour(9).format("h A");
 $("#hour9").text(hour9El);
 var hour10El = moment().hour(10).format("h A");
@@ -112,7 +110,19 @@ function changeColor(){
         $(".time").addClass("future");
     }
 }
-
 changeColor();
 
+var saveBtnEl = $("#saveBtn");
 
+var userInputEl = $('input[name="scheduleItem"]').val().trim();
+
+function saveInput(event){
+    event.presentDefault();
+
+    var event9 = userInput9El.val().trim();
+}
+
+saveBtnEl.on("click", function(event) {
+
+
+})
