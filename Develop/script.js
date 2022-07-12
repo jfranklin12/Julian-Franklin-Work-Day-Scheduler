@@ -112,27 +112,65 @@ function changeColor(){
 }
 changeColor();
 
+// Save Button Variable
 var saveBtnElList = document.querySelectorAll(".saveBtn");
+// User Input Vaiables
+var userInput9El = document.getElementById("userInput9");
+var userInput10El = document.getElementById("userInput10");
+var userInput11El = document.getElementById("userInput11");
+var userInput12El = document.getElementById("userInput12");
+var userInput13El = document.getElementById("userInput13");
+var userInput14El = document.getElementById("userInput14");
 var userInput15El = document.getElementById("userInput15");
+var userInput16El = document.getElementById("userInput16");
+var userInput17El = document.getElementById("userInput17");
 
+// Local Storage for each block
 function saveUserInput(event){
-    var fivet =  userInput15El.value.trim();
-    console.log(fivet)
-    localStorage.setItem("Event15", fivet);
+    var event9 =  userInput9El.value.trim();
+    localStorage.setItem("Event9", event9);
+    var event10 =  userInput10El.value.trim();
+    localStorage.setItem("Event10", event10);
+    var event11 =  userInput11El.value.trim();
+    localStorage.setItem("Event11", event11);
+    var event12 =  userInput12El.value.trim();
+    localStorage.setItem("Event12", event12);
+    var event13 =  userInput13El.value.trim();
+    localStorage.setItem("Event13", event13);
+    var event14 =  userInput14El.value.trim();
+    localStorage.setItem("Event14", event14);
+    var event15 =  userInput15El.value.trim();
+    localStorage.setItem("Event15", event15);
+    var event16 =  userInput16El.value.trim();
+    localStorage.setItem("Event16", event16);
+    var event17 =  userInput17El.value.trim();
+    localStorage.setItem("Event17", event17);
 }
-
+// Save Button Event Listener
 saveBtnElList.forEach(function(saveBtnEl) {
     saveBtnEl.addEventListener("click", saveUserInput);
-    console.log("click")
 })
 
+// Save item to page on refresh
 function saveOnRefresh(event){
+    var storage9 = localStorage.getItem("Event9");
+    userInput9El.value = storage9;
+    var storage10 = localStorage.getItem("Event10");
+    userInput10El.value = storage10;
+    var storage11 = localStorage.getItem("Event11");
+    userInput11El.value = storage11;
+    var storage12 = localStorage.getItem("Event12");
+    userInput12El.value = storage12;
+    var storage13 = localStorage.getItem("Event13");
+    userInput13El.value = storage13;
+    var storage14 = localStorage.getItem("Event14");
+    userInput14El.value = storage14;
     var storage15 = localStorage.getItem("Event15");
     userInput15El.value = storage15;
-    console.log(storage15);
+    var storage16 = localStorage.getItem("Event16");
+    userInput16El.value = storage16;
+    var storage17 = localStorage.getItem("Event17");
+    userInput17El.value = storage17;
 }
 
 saveOnRefresh()
-
-
-
