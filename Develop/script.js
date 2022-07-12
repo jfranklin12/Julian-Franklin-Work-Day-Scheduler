@@ -3,6 +3,7 @@ var currentDayEl = moment().format("dddd, MMMM Do YYYY");
 $("#currentDay").text(currentDayEl);
 // variable to get current hour in 24 hour interval
 var currentTimeEl = parseInt(moment().hour());
+
 // variables to display time
 var hour9El = moment().hour(9).format("h A");
 $("#hour9").text(hour9El);
@@ -111,24 +112,27 @@ function changeColor(){
 }
 changeColor();
 
-// var saveBtnEl = $("#saveBtn");
+var saveBtnElList = document.querySelectorAll(".saveBtn");
+var userInput15El = document.getElementById("userInput15");
 
-// var userInputEl = $('input[name="scheduleItem"]').val().trim();
-// console.log(userInputEl)
+function saveUserInput(event){
+    var fivet =  userInput15El.value.trim();
+    console.log(fivet)
+    localStorage.setItem("Event15", fivet);
+}
 
-// function saveInput(event){
-//     event.preventDefault();
+saveBtnElList.forEach(function(saveBtnEl) {
+    saveBtnEl.addEventListener("click", saveUserInput);
+    console.log("click")
+})
 
-//     userInputEl.text = ""
+function saveOnRefresh(event){
+    var storage15 = localStorage.getItem("Event15");
+    userInput15El.value = storage15;
+    console.log(storage15);
+}
 
-//     var item = document.createElement("p");
-    
-//     localStorage.setItem("item", JSON.stringify(item));
+saveOnRefresh()
 
-// }
 
-// saveBtnEl.on("click", function(event) {
-//     event.preventDefault();
-//     saveInput();
 
-// });
