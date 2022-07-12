@@ -2,8 +2,7 @@
 var currentDayEl = moment().format("dddd, MMMM Do YYYY");
 $("#currentDay").text(currentDayEl);
 // variable to get current hour in 24 hour interval
-var currentTimeEl = moment().hour();
-console.log(currentTimeEl)
+var currentTimeEl = parseInt(moment().hour());
 // variables to display time
 var hour9El = moment().hour(9).format("h A");
 $("#hour9").text(hour9El);
@@ -39,90 +38,97 @@ var color17 = 17
 function changeColor(){
     // 9 am color change
     if (color9 == currentTimeEl) {
-        $(".time").addClass("present");
+        $("#userInput9").addClass("present");
     } else if (color9 < currentTimeEl) {
-        $(".time").addClass("past");
+        $("#userInput9").addClass("past");
     } else {
-        $(".time").addClass("future");
+        $("#userInput9").addClass("future");
     }
     // 10 am color change
     if (color10 == currentTimeEl) {
-        $(".time").addClass("present");
+        $("#userInput10").addClass("present");
     } else if (color10 < currentTimeEl) {
-        $(".time").addClass("past");
+        $("#userInput10").addClass("past");
     } else {
-        $(".time").addClass("future");
+        $("#userInput10").addClass("future");
     }
     // 11 am color change
     if (color11 == currentTimeEl) {
-        $(".time").addClass("present");
+        $("#userInput11").addClass("present");
     } else if (color11 < currentTimeEl) {
-        $(".time").addClass("past");
+        $("#userInput11").addClass("past");
     } else {
-        $(".time").addClass("future");
+        $("#userInput11").addClass("future");
     }
     // 12 pm color change
     if (color12 == currentTimeEl) {
-        $(".time").addClass("present");
+        $("#userInput12").addClass("present");
     } else if (color12 < currentTimeEl) {
-        $(".time").addClass("past");
+        $("#userInput12").addClass("past");
     } else {
-        $(".time").addClass("future");
+        $("#userInput12").addClass("future");
     }
     // 1 pm color change
     if (color13 == currentTimeEl) {
-        $(".time").addClass("present");
+        $("#userInput13").addClass("present");
     } else if (color13 < currentTimeEl) {
-        $(".time").addClass("past");
+        $("#userInput13").addClass("past");
     } else {
-        $(".time").addClass("future");
+        $("#userInput13").addClass("future");
     }
     // 2 pm color change
     if (color14 == currentTimeEl) {
-        $(".time").addClass("present");
+        $("#userInput14").addClass("present");
     } else if (color14 < currentTimeEl) {
-        $(".time").addClass("past");
+        $("#userInput14").addClass("past");
     } else {
-        $(".time").addClass("future");
+        $("#userInput14").addClass("future");
     }
     // 3 pm color change
     if (color15 == currentTimeEl) {
-        $(".time").addClass("present");
+        $("#userInput15").addClass("present");
     } else if (color15 < currentTimeEl) {
-        $(".time").addClass("past");
+        $("#userInput15").addClass("past");
     } else {
-        $(".time").addClass("future");
+        $("#userInput15").addClass("future");
     }
     // 4 pm color change
     if (color16 == currentTimeEl) {
-        $(".time").addClass("present");
+        $("#userInput16").addClass("present");
     } else if (color16 < currentTimeEl) {
-        $(".time").addClass("past");
+        $("#userInput16").addClass("past");
     } else {
-        $(".time").addClass("future");
+        $("#userInput16").addClass("future");
     }
     // 5 pm color change
     if (color17 == currentTimeEl) {
-        $(".time").addClass("present");
+        $("#userInput17").addClass("present");
     } else if (color17 < currentTimeEl) {
-        $(".time").addClass("past");
+        $("#userInput17").addClass("past");
     } else {
-        $(".time").addClass("future");
+        $("#userInput17").addClass("future");
     }
 }
 changeColor();
 
-var saveBtnEl = $("#saveBtn");
+// var saveBtnEl = $("#saveBtn");
 
-var userInputEl = $('input[name="scheduleItem"]').val().trim();
+// var userInputEl = $('input[name="scheduleItem"]').val().trim();
+// console.log(userInputEl)
 
-function saveInput(event){
-    event.presentDefault();
+// function saveInput(event){
+//     event.preventDefault();
 
-    var event9 = userInput9El.val().trim();
-}
+//     userInputEl.text = ""
 
-saveBtnEl.on("click", function(event) {
+//     var item = document.createElement("p");
+    
+//     localStorage.setItem("item", JSON.stringify(item));
 
+// }
 
-})
+// saveBtnEl.on("click", function(event) {
+//     event.preventDefault();
+//     saveInput();
+
+// });
